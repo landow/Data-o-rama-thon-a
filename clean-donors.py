@@ -14,4 +14,14 @@ for row in data:
 	row_list = row.split(',')
 	
 	row_list[11] = row_list[11].upper()
-	print row_list
+	row_list[15] = row_list[15].replace('&nbsp;', ' ')
+	row_list[-1] = float(row_list[-1])
+	row_list[-4] = str(row_list[-4])
+	if row_list[-1] > 5000.0:
+	    print row_list
+	if row_list[-5] != 'NY':
+		print row_list
+
+output = []
+output.append(row_list)
+
