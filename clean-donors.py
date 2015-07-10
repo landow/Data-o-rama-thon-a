@@ -10,18 +10,25 @@ output = []
 # append it into the output list, like this: output.append(cleaned_row)
 
 ########## YOUR CODE GOES HERE ##########
+
+# Hey Landon -- Nice work! Comments below.
+
 for row in data:
-	row_list = row.split(',')
+	# Be sure to use four spaces, not tabs, for your indents
+
+    row_list = row.split(',')
 	
-	row_list[11] = row_list[11].upper()
-	row_list[15] = row_list[15].replace('&nbsp;', ' ')
-	row_list[-1] = float(row_list[-1])
-	row_list[-4] = str(row_list[-4])
-	if row_list[-1] > 5000.0:
-	    print row_list
-	if row_list[-5] != 'NY':
-		print row_list
+    row_list[11] = row_list[11].upper()
+    row_list[15] = row_list[15].replace('&nbsp;', ' ')
+    row_list[-1] = float(row_list[-1])
+    row_list[-4] = str(row_list[-4])
+    if row_list[-1] > 5000.0:
+        print row_list
+    if row_list[-5] != 'NY':
+        print row_list
 
-output = []
-output.append(row_list)
+# The output list was already created above, so no need to create it here. In fact, by creating it here, you're basically resetting it as empty again, which you don't want.
+#output = [] 
 
+	# This should be indented four spaces into the for loop. That ensures each iteration of the loop will fill the output with clean data.
+    output.append(row_list)
